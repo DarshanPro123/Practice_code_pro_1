@@ -16,19 +16,11 @@ function App() {
   // const [score, setScore] = useState("");
 
   const [time, setTime] = useState(new Date().toLocaleTimeString());
-
-  // const addList = () => {};
-
-  // normal functioon examples.....
-  // async function getData() {
-  //   const data = await fetch("https://api.adviceslip.com/advice");
-  //   const { slip } = await data.json();
-  //   const { advice } = slip;
-  //   setCounter(counter + 1);
-  //   console.log(slip);
-  //   console.log(advice);
-  //   setAdvice(advice);
-  // }
+  useEffect(() => {
+    setInterval(() => {
+      setTime(new Date().toLocaleTimeString());
+    }, 1000);
+  }, []);
 
   // arrow function example...
   const getData = async () => {
@@ -39,62 +31,45 @@ function App() {
     console.log(slip);
     console.log(advice);
     setAdvice(advice);
-    // let age = 21;
-    // let check = age ?? 19;
-    // console.log(check);
-
-    // let username = null || "guest";  OR oprator example  //output : guest
-    //let username = null ?? "guest"; console.log(username);
-
-    // Nullish Coalescing Operator example // output : guest
 
     // Ternaries  oprators using in that below funcinalityyyys
     {
       counter >= 10 ? alert("Level 1 comlated") : "";
     }
-
-    //sorting method
-    const arr = [1, 5, 4, 5, 3, 67, 8, 5, 3];
-    //that's sort method change in real array of method
-    arr.sort();
-    console.log(arr);
-    // {
-    //   counter >= 10 ? totalScore() : "";
-    // }
   };
 
-  // const totalScore = () => {
-  //   if (counter >= 10) {
-  //     setScore("Level 1 Complted");
-  //   } else if (counter >= 20) {
-  //     setCounter("level 2 complated");
-  //   }
-  // };
-
-  useEffect(() => {
-    setInterval(() => {
-      setTime(new Date().toLocaleTimeString());
-    }, 1000);
-  }, []);
-
-  //  confusig oprator : ------->   nullish coalescing oprator
-
-  //fisrt time call component to call that getData() function called with advice with one couter value
-  // useEffect(() => {
-  //   getData();
-  // }, []);
+  const getArray = () => {};
+  const getObj = () => {};
+  const getRest = () => {};
+  const getSpread = () => {};
+  const getLitrals = () => {};
+  const getTernories = () => {};
+  const getArrow = () => {};
+  const getAnd = () => {};
+  const getOr = () => {};
 
   return (
     <>
-      <div className="container">
-        {/* use in abouve template litral any javascript expression in this string*/}
-        {/* use || OR logical oprator */}
+      <div className="buttons">
+        <button onClick={getArray}>Array Destructring</button>
+        <button onClick={getObj}>Obj Destrctring</button>
+        <button onClick={getRest}>Rest op</button>
+        <button onClick={getSpread}>Spread op</button>
+        <button onClick={getLitrals}>Template Litrals</button>
+        <button onClick={getTernories}>Terenories op</button>
+        <button onClick={getArrow}>Arrow Function</button>
+        <button onClick={getAnd}>Logical and</button>
+        <button onClick={getOr}>Obj Destrctring</button>
+      </div>
+      {/* <div className="container">
+        use in abouve template litral any javascript expression in this string*/}
+      {/* use || OR logical oprator
         <p>{`Your Score is ${
           counter > 0 || false ? counter : "counter is 0"
         }`}</p>
         <h1> {advice} </h1> <button onClick={getData}> Get Advice </button>{" "}
         <h4>{time}</h4>
-      </div>{" "}
+      </div>{" "} */}
     </>
   );
 }
