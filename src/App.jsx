@@ -5,6 +5,8 @@
 // 4 Ternory oprator is used in showing alrt in use score 10 it's level 1 is complated
 // 5 : All function is a arrow function
 //6 : OR and ??  Nullish Coalescing oprato used in with one exmple
+//7 : Sorting method in aarray...... it's sort aary to assending and desending
+// that sortig method is for changing a original array to it;s a mutable method
 import { useEffect, useState } from "react";
 import "./App.css";
 
@@ -50,6 +52,12 @@ function App() {
     {
       counter >= 10 ? alert("Level 1 comlated") : "";
     }
+
+    //sorting method
+    const arr = [1, 5, 4, 5, 3, 67, 8, 5, 3];
+    //that's sort method change in real array of method
+    arr.sort();
+    console.log(arr);
     // {
     //   counter >= 10 ? totalScore() : "";
     // }
