@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #090909;
+  color: rgb(247, 236, 236);
+  text-align: center;
+}
+
+::selection {
+  background-color: white;
+  color: rgb(55, 213, 55);
+}
+
+.container {
+  /* border: 1px solid rgb(234, 226, 226); */
+  margin: 15% 0;
+  padding: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.container button {
+  width: 50%;
+  padding: 10px 20px;
+  margin: 0 auto;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.container p {
+  font-size: 2rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+h4 {
+  font-size: 2.3rem;
+}
+
+.todos {
+  width: 100%;
+  border: 1px solid white;
+  padding: 20px;
+}
+
+.todos input {
+  width: 70%;
+  padding: 20px 10px;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.todos button {
+  padding: 20px 10px;
+  font-size: 2rem;
+}
