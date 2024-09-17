@@ -1,7 +1,10 @@
 //1 : object Destrucring in getdata() function
 //2: rest and spread oprators in   : => rest is for restinga data in make a new array to short a array in one array
 // in spread oprator this array to make a array expendable
-
+// 3 : Template litral in  last to print a score of levelss
+// 4 Ternory oprator is used in showing alrt in use score 10 it's level 1 is complated
+// 5 : All function is a arrow function
+//6 : OR and ??  Nullish Coalescing oprato used in with one exmple
 import { useEffect, useState } from "react";
 import "./App.css";
 
