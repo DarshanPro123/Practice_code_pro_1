@@ -42,9 +42,10 @@ function App() {
     // console.log(check);
 
     // let username = null || "guest";  OR oprator example  //output : guest
-    let username = null ?? "guest"; // Nullish Coalescing Operator example // output : guest
+    //let username = null ?? "guest"; console.log(username);
 
-    console.log(username);
+    // Nullish Coalescing Operator example // output : guest
+
     // Ternaries  oprators using in that below funcinalityyyys
     {
       counter >= 10 ? alert("Level 1 comlated") : "";
