@@ -48,20 +48,29 @@ h4 {
 
 .buttons {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
   gap: 20px;
-  width: 50%;
+  width: 100%;
+  padding: 20px 0;
   align-items: center;
-  height: 100vh;
+  height: auto;
   border: 1px solid white;
   margin: auto;
 }
 
 .buttons button {
-  width: 60%;
+  width: 200px;
+  height: 200px;
   padding: 20px;
   border-radius: 10px;
   cursor: pointer;
+  transition: all 0.4s;
+}
+
+.buttons button:hover {
+  transform: scale(1.1);
 }
 
 .buttons button:nth-child(1):hover {
@@ -93,10 +102,30 @@ h4 {
   color: rgb(0, 0, 0);
 }
 .buttons button:nth-child(8):hover {
-  background-color: red;
-  color: white;
+  background-color: rgb(24, 216, 249);
+  color: rgb(3, 3, 3);
 }
 .buttons button:nth-child(9):hover {
-  background-color: red;
-  color: white;
+  background-color: rgb(211, 154, 21);
+  color: rgb(231, 225, 225);
+}
+.buttons button:nth-child(10):hover {
+  background-color: rgb(224, 234, 25);
+  color: rgb(40, 40, 40);
+}
+.buttons button:nth-child(11):hover {
+  background-color: rgb(122, 8, 166);
+  color: rgb(245, 241, 241);
+}
+.buttons button:nth-child(12):hover {
+  background-color: rgb(7, 192, 78);
+  color: rgb(40, 40, 40);
+}
+.buttons button:nth-child(13):hover {
+  background-color: rgb(214, 224, 13);
+  color: rgb(40, 40, 40);
+}
+.buttons button:nth-child(14):hover {
+  background-color: rgb(140, 35, 117);
+  color: rgb(248, 245, 245);
 }
