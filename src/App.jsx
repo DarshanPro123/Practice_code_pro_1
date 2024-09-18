@@ -247,6 +247,29 @@ function App() {
     console.log("After deleting a obj", deleObj);
   };
 
+  const getApi = () => {
+    const dtaApi = () => {
+      fetch("https://jsonplaceholder.typicode.com/posts")
+        .then((res) => res.json())
+        .then((data) => console.log(data));
+    };
+
+    dtaApi();
+
+    console.log("data check");
+  };
+
+  const getAycawait = () => {
+    const dataApi = async () => {
+      const reso = await fetch("https://jsonplaceholder.typicode.com/todos");
+      const data = await reso.json();
+      console.log(data);
+    };
+    dataApi();
+
+    console.log("Data is updated");
+  };
+
   return (
     <>
       <div className="buttons">
@@ -265,6 +288,8 @@ function App() {
         <button onClick={getReduce}>Reduce Method</button>
         <button onClick={getSort}>Array-Sorting Method</button>
         <button onClick={getEmmutble}>Emmutable array CRUD opration</button>
+        <button onClick={getApi}>Get Api</button>
+        <button onClick={getAycawait}>Get Aync Await Data..</button>
       </div>
     </>
   );
