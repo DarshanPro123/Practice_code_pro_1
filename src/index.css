@@ -61,4 +61,42 @@ h4 {
   width: 60%;
   padding: 20px;
   border-radius: 10px;
+  cursor: pointer;
+}
+
+.buttons button:nth-child(1):hover {
+  background-color: red;
+  color: white;
+}
+.buttons button:nth-child(2):hover {
+  background-color: rgb(104, 247, 21);
+  color: rgb(0, 0, 0);
+}
+.buttons button:nth-child(3):hover {
+  background-color: rgb(21, 68, 130);
+  color: white;
+}
+.buttons button:nth-child(4):hover {
+  background-color: rgb(228, 26, 247);
+  color: rgb(0, 0, 0);
+}
+.buttons button:nth-child(5):hover {
+  background-color: rgb(184, 9, 9);
+  color: white;
+}
+.buttons button:nth-child(6):hover {
+  background-color: rgb(243, 158, 31);
+  color: rgb(0, 0, 0);
+}
+.buttons button:nth-child(7):hover {
+  background-color: rgb(224, 250, 26);
+  color: rgb(0, 0, 0);
+}
+.buttons button:nth-child(8):hover {
+  background-color: red;
+  color: white;
+}
+.buttons button:nth-child(9):hover {
+  background-color: red;
+  color: white;
 }

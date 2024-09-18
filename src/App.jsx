@@ -17,6 +17,7 @@ function App() {
 
     const { name, age, surname } = objj;
 
+    console.log(" destructring");
     console.log(
       `My Name is ${name} , My Age is ${age} and My surname is ${surname} `
     );
@@ -77,7 +78,13 @@ function App() {
       `My name is  ${name} , my age is ${age} , My main hobbie is ${hobbie} , interested in ${intrest}`
     );
   };
-  const getTernories = () => {};
+  const getTernories = () => {
+    const name = prompt("Enter your name");
+    const age = prompt(`hii ${name} , Enter your age `);
+
+    const driveTest = age >= 18 ? `${name} can Drive` : `${name} can't drive`;
+    console.log(driveTest);
+  };
   const getArrow = () => {};
   const getAnd = () => {};
   const getOr = () => {};
@@ -88,11 +95,11 @@ function App() {
         <button onClick={getArray}>Array Destructring</button>
         <button onClick={getObj}>Obj Destrctring</button>
         <button onClick={getRest}>Rest oprator</button>
-        <button onClick={getSpread}>Spread op</button>
+        <button onClick={getSpread}>Spread oprator</button>
         <button onClick={getLitrals}>Template Litrals</button>
-        <button onClick={getTernories}>Terenories op</button>
+        <button onClick={getTernories}>Terenories opratores</button>
         <button onClick={getArrow}>Arrow Function</button>
-        <button onClick={getAnd}>Logical and</button>
+        <button onClick={getAnd}>Logical and,OR and ??</button>
         <button onClick={getOr}>Obj Destrctring</button>
       </div>
       {/* <div className="container">
