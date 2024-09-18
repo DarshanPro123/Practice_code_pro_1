@@ -29,6 +29,34 @@ function App() {
   ];
   // console.log(surnames);
 
+  // fo reduce that data for that array for reduce fuction
+  const daobj = [
+    {
+      id: 3,
+      name: "abc",
+      color: "blue",
+      colno: 450,
+    },
+    {
+      id: 2,
+      name: "def",
+      color: "red",
+      colno: 145,
+    },
+    {
+      id: 23,
+      name: "ghi",
+      color: "black",
+      colno: 435,
+    },
+    {
+      id: 74,
+      name: "xzy",
+      color: "green",
+      colno: 125,
+    },
+  ];
+
   const getArray = () => {
     const arr = [3, 4, 5, 24, 343, 24, 53, 53, 4, 5, 4];
     const [zroindx, frstinx, thrdindx] = arr;
@@ -168,9 +196,20 @@ function App() {
     console.log(allsurnames);
   };
 
-  const getReduce = () => {};
+  const getReduce = () => {
+    const redus = daobj.reduce((exmple, obj) => exmple + obj.colno, 0);
+    console.log(redus);
+  };
 
-  const getSort = () => {};
+  const getSort = () => {
+    const arr1 = [23, 35, 332, 21, 12];
+    // const arr11 = arr1.sort((a, b) => a - b);
+    //that sort method change a original array value so use below method
+    const arr2 = arr1.slice();
+    arr2.sort((a, b) => a - b);
+    console.log("copy of array", arr2);
+    console.log("original array", arr1);
+  };
 
   return (
     <>
