@@ -44,13 +44,13 @@ function App() {
       colno: 145,
     },
     {
-      id: 23,
+      id: 1,
       name: "ghi",
       color: "black",
       colno: 435,
     },
     {
-      id: 74,
+      id: 4,
       name: "xzy",
       color: "green",
       colno: 125,
@@ -209,6 +209,42 @@ function App() {
     arr2.sort((a, b) => a - b);
     console.log("copy of array", arr2);
     console.log("original array", arr1);
+
+    console.log("its for a array of object sortig");
+    const dtaobjs = daobj.slice().sort((a, b) => a.id - b.id);
+    console.log(dtaobjs);
+  };
+
+  const getEmmutble = () => {
+    // addig data to data object
+    console.log("------Create-----");
+
+    const dtamutable = daobj.slice();
+    console.log("Before addig data", dtamutable);
+    const obj1 = {
+      id: 45,
+      name: "yyz",
+      color: "whiteblack",
+      colno: 233,
+    };
+
+    const addObj = [...dtamutable, obj1];
+    console.log("Adding Data........");
+    console.log("After adding Data", addObj);
+
+    console.log("------Update-----");
+
+    const idselect = 4;
+    const updateObj = dtamutable.map((obj) =>
+      obj.id === idselect ? { ...obj, name: "Updated name" } : obj
+    );
+    console.log(updateObj);
+
+    console.log("------Delete-----");
+
+    const deleteId = 3;
+    const deleObj = updateObj.filter((obj) => obj.id != deleteId);
+    console.log("After deleting a obj", deleObj);
   };
 
   return (
@@ -223,26 +259,32 @@ function App() {
         <button onClick={getArrow}>Arrow Function</button>
         <button onClick={getAnd}>Logical ANd && </button>
         <button onClick={getOr}>OR and nullish</button>
-        <button onClick={getOptionalChain}>Option-Chaining</button>
+        <button onClick={getOptionalChain}>Optional-Chaining</button>
         <button onClick={getMap}>Map method</button>
         <button onClick={getFilter}>Filter Method</button>
         <button onClick={getReduce}>Reduce Method</button>
         <button onClick={getSort}>Array-Sorting Method</button>
+        <button onClick={getEmmutble}>Emmutable array CRUD opration</button>
       </div>
-      {/* <div className="container">
-          use in abouve template litral any javascript expression in this string*/}
-      {/* use || OR logical oprator
-          <p>{`Your Score is ${
-            counter > 0 || false ? counter : "counter is 0"
-          }`}</p>
-          <h1> {advice} </h1> <button onClick={getData}> Get Advice </button>{" "}
-          <h4>{time}</h4>
-        </div>{" "} */}
     </>
   );
 }
 
 export default App;
+
+// {
+//   /* <div className="container">
+//           use in abouve template litral any javascript expression in this string*/
+// }
+// {
+//   /* use || OR logical oprator
+//           <p>{`Your Score is ${
+//             counter > 0 || false ? counter : "counter is 0"
+//           }`}</p>
+//           <h1> {advice} </h1> <button onClick={getData}> Get Advice </button>{" "}
+//           <h4>{time}</h4>
+//         </div>{" "} */
+// }
 
 // that sortig method is for changing a original array to it;s a mutable method
 // import { useEffect, useState } from "react";
